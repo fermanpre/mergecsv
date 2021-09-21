@@ -16,9 +16,9 @@ for file in MyFiles:  # Por cada uno de los archivos de la carpeta
     if file.endswith(".csv"):  # Si la extensión es .csv
         files += 1
         MyCSVFiles.append(file)  # Lo añadimos a la lista que hemos creado antes
-    if files == 0:
-        print("No hay archivos .csv en la carpeta")
-        exit()  # Salimos del programa, no hay nada que convertir
+if files == 0:
+    print("No hay archivos .csv en la carpeta")
+    exit()  # Salimos del programa, no hay nada que convertir
 
 # Una vez que hemos comprobado que hay archivos .csv, creamos el archivo para unificar los datos
 write_to = open(MyFolder / 'paste.csv', 'w', newline='',
